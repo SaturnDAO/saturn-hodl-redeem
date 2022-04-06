@@ -1,0 +1,57 @@
+{
+  "name": "saturn-hodl-redeem",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Simple interface to redeem existing Saturn tokens balances from Saturn.Networks \"Final Hodl\" contract",
+  "homepage": "./",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaturnDAO/saturn-hodl-abi.git"
+  },
+  "keywords": [
+    "Saturn.Network",
+    "Final Hodl",
+    "Hodl Redeem"
+  ],
+  "author": "SaturnDAO <saturn-dao@protonmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SaturnDAO/saturn-hodl-abi/issues"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build && next export",
+    "deploy": "next build && next export && node deploy.js",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emeraldpay/hashicon": "^0.5.2",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.5.1",
+    "@mui/material": "^5.2.3",
+    "@mui/styles": "^5.2.3",
+    "@mui/x-data-grid": "^5.7.0",
+    "@mui/x-data-grid-generator": "^5.7.0",
+    "blockchain-prototypes": "^0.0.8",
+    "ethers": "^5.6.2",
+    "next": "12.1.4",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "saturn-hodl-abi": "^0.0.1",
+    "window-ethereum": "^0.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.23",
+    "@types/react": "17.0.43",
+    "@types/react-dom": "17.0.14",
+    "dotenv": "^16.0.0",
+    "eslint": "8.12.0",
+    "eslint-config-next": "12.1.4",
+    "ipfs-http-client": "^56.0.2",
+    "it-last": "^1.0.6",
+    "typescript": "4.6.3"
+  }
+}
