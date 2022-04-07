@@ -2,7 +2,7 @@
   "name": "saturn-hodl-redeem",
   "version": "0.0.1",
   "private": true,
-  "description": "Simple interface to redeem existing Saturn tokens balances from Saturn.Networks \"Final Hodl\" contract",
+  "description": "Simple interface to interact with Saturn Network's \"Final Hodl\" contract.",
   "homepage": "./",
   "repository": {
     "type": "git",

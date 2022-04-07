@@ -205,16 +205,20 @@ const HodlRedeem: React.FC = props => {
     }
   }
 
-  const redeem = useCallback(async () => {
-    if (!contract || !provider) return snack(`Contract instance not loaded`)
-    if (!purchases || !orderId) return snack(`No HODL Order selelected`)
-    if (btnIsDisabled()) return snack(`You are not allowed to execture this contract`)
+  async function redeem () {
+    if (!provider) return snack(`No Provider connected`)
+    if (!orderId) return snack(`No HODL Order selelected`)
 
-    const tx = await contract.redeem(orderId)
-    const receipt = await provider.waitForTransaction(tx.hash)
+    try {
+      const signer = await provider.getSigner()
+      const contract = Hodl__factory.connect(contractAddress, signer)
+      const tx = await contract.redeem(orderId)
+      const receipt = await provider.waitForTransaction(tx.hash)
+  
+      return receipt
 
-    return receipt
-  }, [ contract, orderId ])
+    }catch(error) { console.error(error) }
+  }
 
   const getPurchaserInfo = useCallback(async (_purchaser?: string) => {
     if (!contract || !purchases || (!purchaser && !_purchaser)) return
