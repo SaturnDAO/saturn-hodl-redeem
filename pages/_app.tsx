@@ -29,7 +29,8 @@ const Application: React.FC<AppProps> = (props) => {
             <CssBaseline />
             <NavigationBar />
               <div style={{ marginTop: '4em' }} >
-              <Component {...pageProps} />
+                {/* @ts-ignore */}
+                <Component {...pageProps} />
               </div>
             
           </EthersContext>
